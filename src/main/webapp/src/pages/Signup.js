@@ -1,8 +1,6 @@
-import React, { useState, useEffect, } from 'react';
-import { Col, Container, Row, OverlayTrigger, Tooltip } from "react-bootstrap";
+import React, { useState } from 'react';
+import { Col, Container, Row} from "react-bootstrap";
 import { signup } from '../utils/api';
-
-
 
 function Signup(props) {
 
@@ -33,26 +31,26 @@ function Signup(props) {
             <Container fluid="xxl">
                 <Row className="d-flex justify-content-center align-items-center mt-5">
                     <Col xl={4} md={6} sm={10} xs={11} className="loginDiv">
-                        <h2 className="text-center mt-2">Sign Up</h2>
+                        <h2 className="text-center mt-2 mb-0 fs-1 Vermin-Vibes">Sign Up</h2>
                         <form onSubmit={(e) => attemptSignup(e)}>
-                            <div className="my-3">
-                                <label htmlFor="username" >Username:</label>
+                            <div className="mb-3">
+                                <label htmlFor="username" className="mb-2" >Username:</label>
                                 <input type="username" id="username" className="text-center" minLength={4}
                                     maxLength={40} placeholder="Username" required valid
                                     onChange={(e) => setUsername(e.target.value)}></input>
                             </div>
                             <div className="my-3">
-                                <label htmlFor="email" >Email:</label>
+                                <label htmlFor="email" className="mb-2">Email:</label>
                                 <input type="email" id="email" className="text-center" minLength={10} maxLength={40}
                                     required placeholder="yourEmail@email.com" onChange={(e) => setEmail(e.target.value)}></input>
                             </div>
                             <div className="my-3">
-                                <label htmlFor="password" >Password:</label>
+                                <label htmlFor="password" className="mb-2">Password:</label>
                                 <input type="password" id="password" className="text-center" minLength={6} maxLength={25}
                                     required placeholder="Password" onChange={(e) => setPassword(e.target.value)}></input>
                             </div>
                             <div className="my-3">
-                                <label htmlFor="passwordConfirm" >Confirm Password:</label>
+                                <label htmlFor="passwordConfirm" className="mb-2">Confirm Password:</label>
                                 <input type="password" id="passwordConfirm" className="text-center" minLength={6} maxLength={25}
                                     required placeholder="Confirm Password" onChange={(e) => setConfirmPassword(e.target.value)}></input>
                             </div>

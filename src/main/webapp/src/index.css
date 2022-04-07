@@ -9,9 +9,18 @@
 
 }
 
+.Vermin-Vibes {
+  font-family: "Vermin Vibes";
+  
+}
+
+.fs-10 {
+  font-size: 7vh;
+  text-shadow: 5px 8px 7px var(--cyan);
+}
+
 body {
-  font-family:Arial, Helvetica, sans-serif;
-  /* font-family: 'Vermin Vibes'; */
+  font-family: 'Rajdhani', sans-serif;
   scroll-behavior: smooth;
   background-color: var(--main-color);
   color: var(--font-color);
@@ -20,6 +29,15 @@ body {
 .login-signup-image {
   background-image: url("./background.jpg");
   background-size:cover;
+}
+
+.no-link {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.no-link:hover {
+  color: var(--font-color);
 }
 
 .noButton {
@@ -87,6 +105,15 @@ input:invalid:focus, textarea:invalid:focus, select:invalid:focus {
 .loginDiv input {
   width: 100%;
 }
+
+/* Navbar styles */
+
+.nav-bar {
+  box-shadow: 1px 0px 30px var(--cyan);
+  border-bottom: 2px double var(--cyan);
+  background-color: var(--nav-color);
+}
+
 
 /* --------------------------------------- */
 /* ----- Media Queries ----- */

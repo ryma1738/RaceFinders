@@ -26,20 +26,20 @@ function Login(props) {
     }, []);
     return (
         <Container fluid className="d-flex justify-content-center align-items-center login-signup-image" style={{"minHeight": "100vh"}}>  
-            <Container fluid >
+            <Container fluid="xxl" >
                 <Row className="d-flex justify-content-center align-items-center mt-5">
                     <Col lg={4} md={6} xs={12} className="loginDiv">
-                        <h2 className="text-center mt-2">Login</h2>
+                        <h2 className="text-center m-0 mt-2 fs-1 Vermin-Vibes">Login</h2>
                         <form onSubmit={(e) => attemptLogin(e)}>
                             <div className="mb-3">
                                 <label htmlFor="email" className="mb-2" >Email:</label>
                                 <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)}
                                     className="text-center" maxLength={40} required placeholder="yourEmail@email.com"></input>
                             </div>
-                            <div className="my-4">
+                            <div className="my-3">
                                 <label htmlFor="password" className="mb-2">Password:</label>
                                 <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}
-                                    className="text-center" maxLength={25} required placeholder="Password"></input>
+                                    className="text-center" minLength={6} maxLength={25} required placeholder="Password"></input>
                             </div>
                             <p className="text-danger text-center">{errorMessage}</p>
                             <div className="d-flex justify-content-center align-items-center my-3">
